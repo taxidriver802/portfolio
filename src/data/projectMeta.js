@@ -1,51 +1,136 @@
+import calculator from "../assets/image/calculator.PNG";
+import firstProject from "../assets/image/firstProject.png";
+import chatapp from "../assets/image/chatapp.png";
+import newsExplorer from "../assets/image/newsExplorer.png";
+import portfolio from "../assets/image/portfolio.png";
+import pythonGames from "../assets/image/pythonGames.png";
+import movie from "../assets/image/movie.png";
+import coffee from "../assets/image/coffee.png";
+import wear from "../assets/image/wear.png";
+import around from "../assets/image/around.png";
+
 const projectMeta = {
   se_project_react: {
-    img: "/assets/task-manager.png",
-    technologies: ["React", "HTML", "CSS", "API"],
+    img: wear,
+    technologies: [
+      "React 18",
+      "Vite",
+      "React Router v6",
+      "JavaScript (ESModules)",
+      "Prettier",
+      "ESLint",
+      "Custom Deployment via SCP",
+    ],
+    links: {
+      live: "https://wearwithweather.jumpingcrab.com",
+    },
   },
   se_project_express: {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: wear,
+    technologies: [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "ESLint",
+      "Prettier",
+      "GitHub Actions",
+    ],
+    links: {
+      live: "https://wearwithweather.jumpingcrab.com",
+    },
   },
   se_project_coffeeshop: {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: coffee,
+    technologies: ["HTML", "CSS"],
   },
   se_project_aroundtheus: {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: around,
+    technologies: [
+      "JavaScript (ES6+)",
+      "Webpack 5",
+      "Babel",
+      "PostCSS",
+      "CSS Modules",
+      "HTML5",
+      "Core-JS (Polyfills)",
+    ],
   },
   React_Movie_List: {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: movie,
+    technologies: [
+      "React 19",
+      "React Router v7",
+      "Vite",
+      "ESLint",
+      "Modern JavaScript (ESModules)",
+    ],
   },
   "python-practice-games": {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: pythonGames,
+    technologies: [
+      "Python 3",
+      "Object-Oriented Programming (OOP)",
+      "Standard Library (e.g., random, time)",
+      "Command-line Interface (CLI)",
+    ],
   },
+  portfolio: {
+    img: portfolio,
+    technologies: [
+      "React 19",
+      "Vite",
+      "Typed.js",
+      "ESLint",
+      "JavaScript (ESModules)",
+    ],
+  },
+
   newsExplorerBackend: {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: newsExplorer,
+    technologies: ["Node.js", "Express", "MongoDB", "JWT", "bcrypt", "CORS"],
   },
   newsExplorer: {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: newsExplorer,
+    technologies: [
+      "React",
+      "Vite",
+      "React Router",
+      "JavaScript",
+      "HTML",
+      "CSS",
+    ],
   },
   "my-chat-frontend": {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: chatapp,
+    technologies: [
+      "React",
+      "Vite",
+      "Socket.io",
+      "Tailwind CSS",
+      "Zustand",
+      "Axios",
+    ],
   },
   "my-chat-backend": {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: chatapp,
+    technologies: [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Socket.io",
+      "JWT",
+      "Cloudinary",
+      "bcrypt",
+    ],
   },
   first_project: {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: firstProject,
+    technologies: ["HTML", "CSS"],
   },
   first_calculator: {
-    img: "/assets/weather-app.png",
-    technologies: ["JavaScript", "HTML", "CSS", "API"],
+    img: calculator,
+    technologies: ["JavaScript", "HTML", "CSS"],
   },
 };
 

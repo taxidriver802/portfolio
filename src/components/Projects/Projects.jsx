@@ -21,8 +21,8 @@ const Projects = () => {
             img: meta.img || "",
             technologies: meta.technologies || [],
             links: {
-              live: repo.homepage || "",
-              source: repo.html_url,
+              live: meta.links?.live || repo.homepage || "",
+              source: meta.links?.source || repo.html_url,
             },
           };
         });

@@ -2,24 +2,27 @@ import { useState } from "react";
 import "./ProjectContainer.css";
 
 const ProjectContainer = ({ projects }) => {
+  const [flippedStates, setFlippedStates] = useState({});
+
+  const handleFlip = (idx) => {
+    setFlippedStates((prev) => ({
+      ...prev,
+      [idx]: !prev[idx],
+    }));
+  };
+
   return (
     <div className="project__container">
       {projects.map((project, index) => {
-        const {
-          title,
-          img,
-          description,
-          technologies,
-          links: { live, source },
-        } = project;
-
-        const [flipped, setFlipped] = useState(false);
+        const { title, img, description, technologies, links = {} } = project;
+        const { live, source } = links;
+        const isFlipped = Boolean(flippedStates[index]);
 
         return (
           <div
-            className={`project__card ${flipped ? "flipped" : ""}`}
+            className={`project__card ${isFlipped ? "flipped" : ""}`}
             key={index}
-            onClick={() => setFlipped((prev) => !prev)}
+            onClick={() => handleFlip(index)}
           >
             {/* Front Face */}
             <div className="project__face project__front">
