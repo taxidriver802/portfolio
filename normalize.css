@@ -1,0 +1,13 @@
+/* normalize.css - minimal version */
+html {
+  line-height: 1.15; /* Correct line height in all browsers */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}

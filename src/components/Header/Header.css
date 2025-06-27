@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  height: 100px;
+}
+
+.header__title {
+  font-size: 3.5em;
+  font-weight: bold;
+  border: 10px solid rgba(230, 228, 228, 0.95);
+  border-radius: 75px;
+  padding: 15px;
+}
+
+.header__logo {
+  width: 100px;
+  border-radius: 100px;
+  margin-left: 25px;
+}
+
+.header__buttons {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__button {
+  border: none;
+  color: #282c34;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+}
