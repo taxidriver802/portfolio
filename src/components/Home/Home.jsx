@@ -1,6 +1,6 @@
 import "./Home.css";
 
-import profileImg from "../../assets/image/IMG_2608.JPG";
+import profileImg from "../../assets/image/IMG_2608.webp";
 import TypingHeader from "../TypingHeader/TypingHeader";
 
 const Home = () => {

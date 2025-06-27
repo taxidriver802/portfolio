@@ -1,13 +1,13 @@
-import calculator from "../assets/image/calculator.PNG";
-import firstProject from "../assets/image/firstProject.png";
-import chatapp from "../assets/image/chatapp.png";
-import newsExplorer from "../assets/image/newsExplorer.png";
-import portfolio from "../assets/image/portfolio.png";
-import pythonGames from "../assets/image/pythonGames.png";
-import movie from "../assets/image/movie.png";
-import coffee from "../assets/image/coffee.png";
-import wear from "../assets/image/wear.png";
-import around from "../assets/image/around.png";
+import calculator from "../assets/image/calculator.webp";
+import firstProject from "../assets/image/firstProject.webp";
+import chatapp from "../assets/image/chatapp.webp";
+import newsExplorer from "../assets/image/newsExplorer.webp";
+import portfolio from "../assets/image/portfolio.webp";
+import pythonGames from "../assets/image/pythonGames.webp";
+import movie from "../assets/image/movie.webp";
+import coffee from "../assets/image/coffee.webp";
+import wear from "../assets/image/wear.webp";
+import around from "../assets/image/around.webp";
 
 const projectMeta = {
   se_project_react: {

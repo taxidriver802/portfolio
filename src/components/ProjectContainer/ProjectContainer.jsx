@@ -30,7 +30,7 @@ const ProjectContainer = ({ projects }) => {
 
               <div className="project__img">
                 {img ? (
-                  <img src={img} alt={`${title} screenshot`} />
+                  <img src={img} alt={`${title}  screenshot`} loading="lazy" />
                 ) : (
                   "No project image"
                 )}
