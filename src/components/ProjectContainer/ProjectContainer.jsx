@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ProjectContainer.css";
 
 const ProjectContainer = ({ projects }) => {
@@ -10,6 +10,10 @@ const ProjectContainer = ({ projects }) => {
       [idx]: !prev[idx],
     }));
   };
+
+  useEffect(() => {
+    console.log("Projects loaded:", projects);
+  }, [projects]);
 
   return (
     <div className="project__container">

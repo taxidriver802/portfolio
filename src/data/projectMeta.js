@@ -84,6 +84,9 @@ const projectMeta = {
       "ESLint",
       "JavaScript (ESModules)",
     ],
+    links: {
+      live: "https://taxidriver802.github.io/portfolio/",
+    },
   },
 
   newsExplorerBackend: {
