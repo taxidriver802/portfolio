@@ -114,6 +114,9 @@ const projectMeta = {
       "Zustand",
       "Axios",
     ],
+    links: {
+      live: "https://fullstack-chat-app-1x3z.onrender.com/",
+    },
   },
   "my-chat-backend": {
     img: chatapp,
@@ -126,6 +129,9 @@ const projectMeta = {
       "Cloudinary",
       "bcrypt",
     ],
+    links: {
+      live: "https://fullstack-chat-app-1x3z.onrender.com/",
+    },
   },
   first_project: {
     img: firstProject,
