@@ -1,0 +1,22 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #282c34;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  width: 190px;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.contact__button {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-align: center;
+  background-color: rgba(230, 228, 228, 0.95);
+}

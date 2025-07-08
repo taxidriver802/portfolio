@@ -1,8 +1,12 @@
+import { useState } from "react";
+
 import "./Header.css";
 
+import Contact from "../Contact/Contact";
 import mylogo from "../../assets/logo/mylogo.png";
 
 const Header = () => {
+  const [showContact, setShowContact] = useState(false);
   return (
     <div className="header">
       <img src={mylogo} alt="website logo" className="header__logo" />
@@ -18,10 +22,19 @@ const Header = () => {
         >
           Projects
         </button>
-        <button className="header__button" type="button">
+        <button
+          className="header__button"
+          type="button"
+          onClick={() => setShowContact(!showContact)}
+        >
           Contact
         </button>
       </div>
+      {showContact && (
+        <div className="header__contact">
+          <Contact />
+        </div>
+      )}
     </div>
   );
 };

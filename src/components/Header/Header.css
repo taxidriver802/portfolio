@@ -11,7 +11,7 @@
 .header__title {
   font-size: 3.5em;
   font-weight: bold;
-  border: 10px solid rgba(230, 228, 228, 0.95);
+  border-bottom: 2.5px solid rgba(230, 228, 228, 0.95);
   border-radius: 75px;
   padding: 15px;
 }
@@ -36,4 +36,10 @@
   border-radius: 5px;
   text-decoration: none;
   padding: 10px 20px;
+}
+
+.header__contact {
+  position: absolute;
+  top: 100px;
+  right: 20px;
 }
