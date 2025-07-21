@@ -1,3 +1,5 @@
+import { ArrowDown } from "lucide-react";
+
 import "./Home.css";
 
 import profileImg from "../../assets/image/IMG_2608.webp";
@@ -26,6 +28,11 @@ const Home = () => {
           the work I'm proud of and the tools I enjoy working with.
         </h3>
       </div>
+      <h2 className="home__project-preview-title">
+        <ArrowDown className="bobbing-arrow" />
+        Scroll down to see my work
+        <ArrowDown className="bobbing-arrow" />
+      </h2>
     </div>
   );
 };

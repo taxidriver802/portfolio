@@ -5,11 +5,17 @@ import "./Header.css";
 import Contact from "../Contact/Contact";
 import mylogo from "../../assets/logo/mylogo.png";
 
-const Header = () => {
+const Header = ({ showEmailForm, setShowEmailForm }) => {
   const [showContact, setShowContact] = useState(false);
+
+  const handleContactClick = () => {
+    setShowContact(!showContact);
+  };
   return (
     <div className="header">
-      <img src={mylogo} alt="website logo" className="header__logo" />
+      <a href="/" className="header__logo-container">
+        <img src={mylogo} alt="website logo" className="header__logo" />
+      </a>
       <div className="header__title">Welcome to My Portfolio </div>
       <div className="header__buttons">
         <button
@@ -25,14 +31,18 @@ const Header = () => {
         <button
           className="header__button"
           type="button"
-          onClick={() => setShowContact(!showContact)}
+          onClick={handleContactClick}
         >
           Contact
         </button>
       </div>
       {showContact && (
         <div className="header__contact">
-          <Contact />
+          <Contact
+            showEmailForm={showEmailForm}
+            setShowEmailForm={setShowEmailForm}
+            setShowContact={setShowContact}
+          />
         </div>
       )}
     </div>

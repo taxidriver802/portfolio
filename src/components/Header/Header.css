@@ -20,6 +20,13 @@
   width: 100px;
   border-radius: 100px;
   margin-left: 25px;
+  margin-right: 75px;
+}
+
+.header__logo-container {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .header__buttons {
