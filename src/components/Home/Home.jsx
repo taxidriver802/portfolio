@@ -1,18 +1,27 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Pin } from "lucide-react";
 
 import "./Home.css";
 
 import profileImg from "../../assets/image/IMG_2608.webp";
-import TypingHeader from "../TypingHeader/TypingHeader";
 
 const Home = () => {
   return (
     <div className="home">
-      <h1 className="home__title">
-        I Am <TypingHeader />
-      </h1>
       <div className="home__body">
-        <img src={profileImg} alt="A picture of me" className="home__image" />
+        <div className="home__body-img-container">
+          <img src={profileImg} alt="A picture of me" className="home__image" />
+          <div className="home__body-img-container-text">
+            <h1 className="home__body-img-container-text-title">
+              Hi, I'm Jason Cox
+            </h1>
+            <h2 className="home__body-img-container-text-subtitle">
+              A Full-Stack Web Developer
+            </h2>
+            <h3 className="home__body-img-container-text-subtitle">
+              <Pin width={18} height={18} /> Minneapolis, MN, USA
+            </h3>
+          </div>
+        </div>
         <h3 className="home__description">
           Hi, I'm Jason Cox — a passionate Full-Stack Web Developer with
           experience in building dynamic, responsive web applications using
@@ -30,7 +39,7 @@ const Home = () => {
       </div>
       <h2 className="home__project-preview-title">
         <ArrowDown className="bobbing-arrow" />
-        Scroll down to see my work
+        Scroll down to see some of my work
         <ArrowDown className="bobbing-arrow" />
       </h2>
     </div>

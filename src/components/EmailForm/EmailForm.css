@@ -61,3 +61,13 @@
   font-weight: bold;
   border: 1px solid white;
 }
+
+.email__form-container-button {
+  border: none;
+  color: #282c34;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}

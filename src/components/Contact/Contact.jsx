@@ -1,22 +1,44 @@
 import { Download } from "lucide-react";
 
 import "./Contact.css";
+import { useEffect, useRef } from "react";
 
-const Contact = ({ setShowEmailForm, setShowContact }) => {
+const Contact = ({ showEmailForm, setShowEmailForm, setShowContact }) => {
+  const contactRef = useRef(null);
+
+  const handleOutsideClick = (event) => {
+    if (contactRef.current && !contactRef.current.contains(event.target)) {
+      setShowContact(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
   const handleEmailClick = () => {
     setShowEmailForm(true);
     setShowContact(false);
   };
 
   return (
-    <div className="contact">
-      <button
-        type="button"
-        onClick={handleEmailClick}
-        className="contact__button"
-      >
-        Email Me
-      </button>
+    <div className="contact" ref={contactRef}>
+      {!showEmailForm ? (
+        <button
+          type="button"
+          onClick={handleEmailClick}
+          className="contact__button"
+        >
+          Email Me
+        </button>
+      ) : (
+        <a href="/" className="contact__button">
+          Home
+        </a>
+      )}
       <a
         className="contact__button"
         href="/portfolio/resume.pdf"

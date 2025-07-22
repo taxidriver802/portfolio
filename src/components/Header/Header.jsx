@@ -3,10 +3,22 @@ import { useState } from "react";
 import "./Header.css";
 
 import Contact from "../Contact/Contact";
-import mylogo from "../../assets/logo/mylogo.png";
+
+import myLogoInverted from "../../assets/logo/invertLogo.png";
+import TypingHeader from "../TypingHeader/TypingHeader";
 
 const Header = ({ showEmailForm, setShowEmailForm }) => {
   const [showContact, setShowContact] = useState(false);
+
+  const handleProjectsClick = () => {
+    if (showEmailForm) {
+      window.location.href = "/";
+    } else {
+      document
+        .getElementById("projects")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const handleContactClick = () => {
     setShowContact(!showContact);
@@ -14,18 +26,16 @@ const Header = ({ showEmailForm, setShowEmailForm }) => {
   return (
     <div className="header">
       <a href="/" className="header__logo-container">
-        <img src={mylogo} alt="website logo" className="header__logo" />
+        <img src={myLogoInverted} alt="website logo" className="header__logo" />
       </a>
-      <div className="header__title">Welcome to My Portfolio </div>
+      <div className="header__title-container">
+        <div className="header__title">I am</div>
+        <div className="header__title-typing">
+          <TypingHeader />
+        </div>
+      </div>
       <div className="header__buttons">
-        <button
-          className="header__button"
-          onClick={() => {
-            document
-              .getElementById("projects")
-              .scrollIntoView({ behavior: "smooth" });
-          }}
-        >
+        <button className="header__button" onClick={handleProjectsClick}>
           Projects
         </button>
         <button

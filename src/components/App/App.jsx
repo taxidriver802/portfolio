@@ -15,7 +15,7 @@ const App = () => {
     e.preventDefault();
 
     const formElement = form.current;
-    const now = new Date().toLocaleString();
+    const now = new Date().toISOString();
     formElement.elements["time"].value = now;
 
     emailjs

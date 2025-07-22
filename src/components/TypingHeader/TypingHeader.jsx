@@ -16,6 +16,12 @@ const TypingHeader = () => {
         "💡 A Creative Thinker",
         "A Passionate Coder",
         "An Adaptable Professional",
+        "🚀 A Problem Solver",
+        "🌐 A Web Application Builder",
+        "🛠️ A React & Node.js Specialist",
+        "🤝 A Team Player",
+        "🎨 A UI/UX Explorer",
+        "🔍 A Detail-Oriented Engineer",
       ],
       typeSpeed: 50,
       backSpeed: 30,
@@ -23,7 +29,7 @@ const TypingHeader = () => {
     });
 
     return () => {
-      typed.current.destroy(); // Clean up on unmount
+      typed.current.destroy();
     };
   }, []);
 
