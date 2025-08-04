@@ -11,15 +11,10 @@ const ProjectContainer = ({ projects }) => {
     }));
   };
 
-  useEffect(() => {
-    console.log("Projects loaded:", projects);
-  }, [projects]);
-
   return (
     <div className="project__container">
       {projects.map((project, index) => {
         const { title, img, description, technologies, links = {} } = project;
-        const { live, source } = links;
         const isFlipped = Boolean(flippedStates[index]);
 
         return (
@@ -47,43 +42,80 @@ const ProjectContainer = ({ projects }) => {
 
             {/* Back Face */}
             <div className="project__face project__back">
-              {technologies?.length > 0 && (
-                <ul className="project__tech-list">
-                  {technologies.map((tech, i) => (
-                    <li className="project__tech-item" key={i}>
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
+              {technologies.frontend && (
+                <>
+                  <h4>Frontend</h4>
+                  <ul className="project__tech-list">
+                    {technologies.frontend.map((tech, i) => (
+                      <li className="project__tech-item" key={i}>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+
+              {technologies.backend && (
+                <>
+                  <h4>Backend</h4>
+                  <ul className="project__tech-list">
+                    {technologies.backend.map((tech, i) => (
+                      <li className="project__tech-item" key={i}>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </>
               )}
 
               <div className="project__links">
-                {live ? (
+                {links.live && (
                   <a
-                    href={live}
+                    href={links.live}
                     className="project__link"
+                    onClick={(e) => e.stopPropagation()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
                   >
                     Live Demo
                   </a>
-                ) : (
-                  <span className="project__link disabled">No demo link</span>
                 )}
 
-                {source ? (
+                {links.frontend && (
                   <a
-                    href={source}
+                    href={links.frontend}
                     className="project__link"
+                    onClick={(e) => e.stopPropagation()}
                     target="_blank"
                     rel="noopener noreferrer"
+                  >
+                    Frontend Repo
+                  </a>
+                )}
+
+                {links.backend && (
+                  <a
+                    href={links.backend}
+                    className="project__link"
                     onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Backend Repo
+                  </a>
+                )}
+
+                {/* Fallback source link for standalone projects */}
+                {!links.frontend && !links.backend && links.source && (
+                  <a
+                    href={links.source}
+                    className="project__link"
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Source Code
                   </a>
-                ) : (
-                  <span className="project__link disabled">No source link</span>
                 )}
               </div>
             </div>
