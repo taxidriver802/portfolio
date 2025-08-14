@@ -34,7 +34,7 @@ const TypingHeader = () => {
   }, []);
 
   return (
-    <div className="text-3xl sm:text-4xl font-bold">
+    <div className="text-3xl sm:text-4xl font-bold max-w-xs">
       <span ref={el} />
     </div>
   );

@@ -24,38 +24,44 @@ const Header = ({ showEmailForm, setShowEmailForm }) => {
     setShowContact(!showContact);
   };
   return (
-    <div className="header">
-      <a href="/" className="header__logo-container">
-        <img src={myLogoInverted} alt="website logo" className="header__logo" />
-      </a>
-      <div className="header__title-container">
-        <div className="header__title">I am</div>
-        <div className="header__title-typing">
-          <TypingHeader />
-        </div>
-      </div>
-      <div className="header__buttons">
-        <button className="header__button" onClick={handleProjectsClick}>
-          Projects
-        </button>
-        <button
-          className="header__button"
-          type="button"
-          onClick={handleContactClick}
-        >
-          Contact
-        </button>
-      </div>
-      {showContact && (
-        <div className="header__contact">
-          <Contact
-            showEmailForm={showEmailForm}
-            setShowEmailForm={setShowEmailForm}
-            setShowContact={setShowContact}
+    <>
+      <div className="header">
+        <a href="/" className="header__logo-container">
+          <img
+            src={myLogoInverted}
+            alt="website logo"
+            className="header__logo"
           />
+        </a>
+        <div className="header__title-container">
+          <div className="header__title">I am</div>
         </div>
-      )}
-    </div>
+        <div className="header__buttons">
+          <button className="header__button" onClick={handleProjectsClick}>
+            Projects
+          </button>
+          <button
+            className="header__button"
+            type="button"
+            onClick={handleContactClick}
+          >
+            Contact
+          </button>
+        </div>
+        {showContact && (
+          <div className="header__contact">
+            <Contact
+              showEmailForm={showEmailForm}
+              setShowEmailForm={setShowEmailForm}
+              setShowContact={setShowContact}
+            />
+          </div>
+        )}
+      </div>
+      <div className="header__title-typing ">
+        <TypingHeader />
+      </div>
+    </>
   );
 };
 

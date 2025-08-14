@@ -92,3 +92,18 @@
     transform: translateY(10px);
   }
 }
+
+@media (max-width: 1000px) {
+  .home {
+    height: 100%;
+  }
+  .home__body {
+    flex-direction: column;
+    margin-top: 95px;
+  }
+
+  .home__project-preview-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}

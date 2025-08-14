@@ -1,6 +1,7 @@
 .projects {
   width: 100%;
-  padding: 5rem 0 10rem;
+  box-sizing: border-box;
+  padding: 5rem 5rem 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,4 +15,10 @@
   margin-bottom: 2rem;
   text-align: center;
   text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+  .projects {
+    padding: 5rem 3rem 10rem;
+  }
 }
