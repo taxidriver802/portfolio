@@ -1,5 +1,8 @@
 import React, { useRef, useState } from "react";
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import emailjs from "emailjs-com";
 
 import "./App.css";
@@ -27,39 +30,35 @@ const App = () => {
       )
       .then(
         (result) => {
-          alert("Message sent!");
+          toast.success("Email sent!");
           console.log("Message sent:", result);
           form.current.reset();
           setShowEmailForm(false);
         },
         (error) => {
-          alert("Failed to send message, please try again later.");
+          toast.error("Failed to send email, please try again.");
           console.log("Error Message:", error);
         }
       );
   };
 
-  if (showEmailForm === true) {
-    return (
-      <div>
-        <Header
-          showEmailForm={showEmailForm}
-          setShowEmailForm={setShowEmailForm}
-        />
-        <EmailForm sendEmail={sendEmail} form={form} />
-      </div>
-    );
-  }
   return (
     <div>
       <Header
         showEmailForm={showEmailForm}
         setShowEmailForm={setShowEmailForm}
       />
-      <Home showEmailForm={showEmailForm} />
-      <section id="projects">
-        <Projects />
-      </section>
+      {showEmailForm ? (
+        <EmailForm sendEmail={sendEmail} form={form} />
+      ) : (
+        <>
+          <Home showEmailForm={showEmailForm} />
+          <section id="projects">
+            <Projects />
+          </section>
+        </>
+      )}
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };
