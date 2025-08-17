@@ -3,7 +3,12 @@ import { Download } from "lucide-react";
 import "./Contact.css";
 import { useEffect, useRef } from "react";
 
-const Contact = ({ showEmailForm, setShowEmailForm, setShowContact }) => {
+const Contact = ({
+  showEmailForm,
+  setShowEmailForm,
+  setShowContact,
+  handleProjectsClick,
+}) => {
   const contactRef = useRef(null);
 
   const handleOutsideClick = (event) => {
@@ -35,9 +40,13 @@ const Contact = ({ showEmailForm, setShowEmailForm, setShowContact }) => {
           Email Me
         </button>
       ) : (
-        <a href="/" className="contact__button">
+        <div
+          className="contact__button"
+          onClick={handleProjectsClick}
+          style={{ cursor: "pointer" }}
+        >
           Home
-        </a>
+        </div>
       )}
       <a
         className="contact__button"
