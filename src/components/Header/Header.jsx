@@ -12,7 +12,8 @@ const Header = ({ showEmailForm, setShowEmailForm }) => {
 
   const handleProjectsClick = () => {
     if (showEmailForm) {
-      window.location.href = "/";
+      setShowEmailForm(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       document
         .getElementById("projects")
@@ -26,13 +27,17 @@ const Header = ({ showEmailForm, setShowEmailForm }) => {
   return (
     <>
       <div className="header">
-        <a href="/" className="header__logo-container">
+        <div
+          className="header__logo-container"
+          onClick={handleProjectsClick}
+          style={{ cursor: "pointer" }}
+        >
           <img
             src={myLogoInverted}
             alt="website logo"
             className="header__logo"
           />
-        </a>
+        </div>
         <div className="header__title-container">
           <div className="header__title">I am</div>
         </div>
@@ -54,6 +59,7 @@ const Header = ({ showEmailForm, setShowEmailForm }) => {
               showEmailForm={showEmailForm}
               setShowEmailForm={setShowEmailForm}
               setShowContact={setShowContact}
+              handleProjectsClick={handleProjectsClick}
             />
           </div>
         )}

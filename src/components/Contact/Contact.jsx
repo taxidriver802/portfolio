@@ -2,8 +2,14 @@ import { Download } from "lucide-react";
 
 import "./Contact.css";
 import { useEffect, useRef } from "react";
+import { toast } from "react-toastify";
 
-const Contact = ({ showEmailForm, setShowEmailForm, setShowContact }) => {
+const Contact = ({
+  showEmailForm,
+  setShowEmailForm,
+  setShowContact,
+  handleProjectsClick,
+}) => {
   const contactRef = useRef(null);
 
   const handleOutsideClick = (event) => {
@@ -24,6 +30,18 @@ const Contact = ({ showEmailForm, setShowEmailForm, setShowContact }) => {
     setShowContact(false);
   };
 
+  const handleResumeDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/portfolio/resume.pdf";
+    link.download = "JasonCox_Resume.pdf";
+    link.click();
+
+    toast.success("Resume downloaded!", {
+      position: "top-left",
+      autoClose: 3000,
+    });
+  };
+
   return (
     <div className="contact" ref={contactRef}>
       {!showEmailForm ? (
@@ -35,17 +53,17 @@ const Contact = ({ showEmailForm, setShowEmailForm, setShowContact }) => {
           Email Me
         </button>
       ) : (
-        <a href="/" className="contact__button">
+        <div
+          className="contact__button"
+          onClick={handleProjectsClick}
+          style={{ cursor: "pointer" }}
+        >
           Home
-        </a>
+        </div>
       )}
-      <a
-        className="contact__button"
-        href="/portfolio/resume.pdf"
-        download="JasonCox_Resume.pdf"
-      >
+      <button className="contact__button" onClick={handleResumeDownload}>
         <Download height={13} width={13} /> Resume
-      </a>
+      </button>
       <a
         className="contact__button"
         href="https://github.com/taxidriver802"
