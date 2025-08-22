@@ -1,20 +1,19 @@
 # Developer Portfolio Web App
 
-A personal portfolio web application showcasing my projects, skills, and experience as a full-stack developer. Built with React, TypeScript, and modern web tools, it provides a clean interface for exploring my work and includes features like project details, a contact form, and smooth animations.
+A personal portfolio web application showcasing my projects, skills, and experience as a full-stack developer. Built with React, and modern web tools, it provides a clean interface for exploring my work and includes features like project details, a contact form, and smooth animations.
 
 ## 🚀 Features
 
 - 📂 Interactive project gallery with GitHub integration
 - ✨ Clean, responsive design optimized for all devices
 - 📧 Contact form for inquiries
-- 🖼️ Project details with live demo and source code links
+- 🖼️ Project details with live demo (if applicable) and source code links
 - 🎨 Smooth animations and transitions for a polished experience
 
 ## 🛠️ Tech Stack
 
-- React (with TypeScript)
+- React
 - Tailwind CSS
-- Node.js / Express (for backend services, if included)
 - GitHub API (to fetch repositories dynamically)
 - Deployed with Vercel
 
